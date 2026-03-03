@@ -1,7 +1,13 @@
 # Yanmeng Project | Postgraduate Exam Information Platform
 
 <p align="center">
-  <video src="docs/media/yanemengvideo15mbcrop1.mp4" width="90%" controls preload="metadata"></video>
+  <a href="docs/media/yanemengvideo15mbcrop1.mp4">
+    <img src="docs/images/showcase/article-list.png" alt="Yanmeng Demo Video" width="90%" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="docs/media/yanemengvideo15mbcrop1.mp4"><strong>▶ Watch Project Demo Video</strong></a>
 </p>
 
 <p align="center">
@@ -31,17 +37,6 @@
 - Frontend capabilities: articles, forum, search, trend word cloud, user center
 - Governance capabilities: fine-grained moderation via admin panel (`/admin`)
 - Collaboration capabilities: built-in API docs (`/docs`) for faster frontend/backend integration
-
-## Architecture
-
-```mermaid
-flowchart LR
-    A[Vue3 + Vite Frontend] --> B[Django REST API]
-    B --> C[(SQLite)]
-    B --> D[/media Local static and uploaded assets]
-    E[/admin Management Panel/] --> B
-    F[/docs API Documentation/] --> B
-```
 
 ## Core Strengths
 
@@ -211,4 +206,3 @@ yanmengProject/
 - Disable `DEBUG` and tighten `ALLOWED_HOSTS` in production
 - Keep all secrets in environment variables
 - Recommended additions: `LICENSE`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`
-

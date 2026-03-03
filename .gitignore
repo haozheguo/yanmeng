@@ -9,8 +9,6 @@ ymfrontend/dist/
 *.pyc
 
 # Local runtime data
-ymbackend/media/uploads/
-ymbackend/media/post/
 
 # IDE
 .idea/

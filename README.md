@@ -1,7 +1,13 @@
 # Yanmeng Project | 研梦考研信息化服务平台
 
 <p align="center">
-  <video src="docs/media/yanemengvideo15mbcrop1.mp4" width="90%" controls preload="metadata"></video>
+  <a href="docs/media/yanemengvideo15mbcrop1.mp4">
+    <img src="docs/images/showcase/article-list.png" alt="Yanmeng Demo Video" width="90%" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="docs/media/yanemengvideo15mbcrop1.mp4"><strong>▶ 点击播放项目演示视频</strong></a>
 </p>
 
 <p align="center">
@@ -31,17 +37,6 @@
 - 前台能力：文章、论坛、搜索、趋势词云、用户中心
 - 管理能力：后台精细化审核与内容治理（`/admin`）
 - 协作能力：可视化接口文档（`/docs`），前后端联调更高效
-
-## 架构总览
-
-```mermaid
-flowchart LR
-    A[Vue3 + Vite 前端] --> B[Django REST API]
-    B --> C[(SQLite)]
-    B --> D[/media 本地静态与上传资源]
-    E[/admin 后台管理/] --> B
-    F[/docs 接口文档/] --> B
-```
 
 ## 核心优势
 
@@ -211,4 +206,3 @@ yanmengProject/
 - 生产环境关闭 `DEBUG`，收紧 `ALLOWED_HOSTS`
 - 所有密钥使用环境变量，不要硬编码
 - 建议补充 `LICENSE`、`CONTRIBUTING.md`、`CODE_OF_CONDUCT.md`
-
