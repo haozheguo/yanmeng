@@ -1,0 +1,22 @@
+.DS_Store
+
+# Frontend
+ymfrontend/node_modules/
+ymfrontend/dist/
+
+# Python
+**/__pycache__/
+*.pyc
+
+# Local runtime data
+ymbackend/media/uploads/
+ymbackend/media/post/
+
+# IDE
+.idea/
+ymbackend/.idea/
+ymfrontend/.idea/
+
+# Env files
+.env
+.env.*

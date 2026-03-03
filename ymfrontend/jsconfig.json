@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@stores/*": ["./src/stores/*"] // Add this line to include the path to the missing file
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
+
