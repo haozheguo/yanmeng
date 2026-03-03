@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="docs/media/yanemengvideo15mbcrop1.mp4">
-    <img src="docs/images/showcase/article-list.png" alt="Yanmeng Demo Video" width="90%" />
+    <img src="docs/images/ppt/image5.png" alt="Yanmeng Demo Video Cover" width="90%" />
   </a>
 </p>
 
