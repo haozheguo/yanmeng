@@ -24,8 +24,9 @@
 
 <p align="center">
   <a href="#-核心优势">核心优势</a> ·
-  <a href="#-功能展示">功能展示</a> ·
   <a href="#-快速启动">快速启动</a> ·
+  <a href="#-项目结构">项目结构</a> ·
+  <a href="#-功能展示">功能展示</a> ·
   <a href="#-演示账号">演示账号</a> ·
   <a href="#-开源发布建议">开源建议</a>
 </p>
@@ -69,6 +70,83 @@
 <p align="center">
   <img src="docs/images/showcase/api-docs.png" alt="API Docs" width="88%" />
 </p>
+
+## 快速启动
+
+### 1) 克隆仓库
+
+```bash
+git clone https://github.com/haozheguo/yanmeng.git
+cd yanmeng
+```
+
+如果遇到网络问题，可先执行终端代理命令再上传：
+
+```bash
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+```
+
+### 2) 后端（conda 推荐）
+
+```bash
+conda create -n yanmeng python=3.8 -y
+conda activate yanmeng
+
+cd ymbackend
+pip install -r requirements.txt
+
+# 开源部署建议：使用你自己的密钥
+export DJANGO_SECRET_KEY='replace-with-your-own-secret-key'
+
+python manage.py migrate
+python manage.py runserver 127.0.0.1:8000
+```
+
+### 3) 前端
+
+```bash
+cd ../ymfrontend
+npm install
+npm run dev
+```
+
+### 4) 访问入口
+
+- 前端：`http://localhost:5173`
+- 后台：`http://127.0.0.1:8000/admin/`
+- 文档：`http://127.0.0.1:8000/docs/`
+
+## 演示账号
+
+### 后台管理员
+
+- 用户名：`admin`
+- 密码：`YanmengAdmin@2026!`
+
+> 首次运行后请立即修改后台密码。
+
+### 前台演示账号
+
+- 手机号：`18800000001`
+- 密码：`demo123456`
+
+可选账号：`18800000002` ~ `18800000007`（密码同上）。
+
+## 项目结构
+
+```text
+yanmengProject/
+├─ ymbackend/              # Django backend
+│  ├─ ymbackend/           # settings, urls
+│  ├─ userInfo/            # user app
+│  ├─ ymblog/              # article app
+│  ├─ ymforum/             # forum app
+│  └─ media/               # local static/media assets
+├─ ymfrontend/             # Vue3 + Vite frontend
+└─ docs/
+   ├─ images/showcase/     # README image
+   └─ media/               # README video
+```
 
 ## 功能展示
 
@@ -135,77 +213,6 @@
   <img src="docs/images/showcase/signup.png" alt="Signup" width="31%" />
   <img src="docs/images/showcase/user-center.png" alt="User Center" width="31%" />
 </p>
-
-## 快速启动
-
-### 1) 克隆仓库
-
-```bash
-git clone <YOUR_REPO_URL>
-cd yanmengProject
-```
-
-### 2) 后端（conda 推荐）
-
-```bash
-conda create -n yanmeng python=3.8 -y
-conda activate yanmeng
-
-cd ymbackend
-pip install -r requirements.txt
-
-# 开源部署建议：使用你自己的密钥
-export DJANGO_SECRET_KEY='replace-with-your-own-secret-key'
-
-python manage.py migrate
-python manage.py runserver 127.0.0.1:8000
-```
-
-### 3) 前端
-
-```bash
-cd ../ymfrontend
-npm install
-npm run dev
-```
-
-### 4) 访问入口
-
-- 前端：`http://localhost:5173`
-- 后台：`http://127.0.0.1:8000/admin/`
-- 文档：`http://127.0.0.1:8000/docs/`
-
-## 演示账号
-
-### 后台管理员
-
-- 用户名：`admin`
-- 密码：`YanmengAdmin@2026!`
-
-> 首次运行后请立即修改后台密码。
-
-### 前台演示账号
-
-- 手机号：`18800000001`
-- 密码：`demo123456`
-
-可选账号：`18800000002` ~ `18800000007`（密码同上）。
-
-## 项目结构
-
-```text
-yanmengProject/
-├─ ymbackend/              # Django backend
-│  ├─ ymbackend/           # settings, urls
-│  ├─ userInfo/            # user app
-│  ├─ ymblog/              # article app
-│  ├─ ymforum/             # forum app
-│  └─ media/               # local static/media assets
-├─ ymfrontend/             # Vue3 + Vite frontend
-└─ docs/
-   ├─ images/showcase/     # README image
-   └─ media/               # README video
-```
 
 ## 开源发布建议
 

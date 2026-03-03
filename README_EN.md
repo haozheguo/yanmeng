@@ -24,8 +24,9 @@
 
 <p align="center">
   <a href="#-core-strengths">Core Strengths</a> ·
-  <a href="#-feature-showcase">Feature Showcase</a> ·
   <a href="#-quick-start">Quick Start</a> ·
+  <a href="#-project-structure">Project Structure</a> ·
+  <a href="#-feature-showcase">Feature Showcase</a> ·
   <a href="#-demo-accounts">Demo Accounts</a> ·
   <a href="#-open-source-release-notes">Release Notes</a>
 </p>
@@ -69,6 +70,83 @@
 <p align="center">
   <img src="docs/images/showcase/api-docs.png" alt="API Docs" width="88%" />
 </p>
+
+## Quick Start
+
+### 1) Clone repository
+
+```bash
+git clone https://github.com/haozheguo/yanmeng.git
+cd yanmeng
+```
+
+If you hit network issues, run the proxy command before pushing:
+
+```bash
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+```
+
+### 2) Backend (conda recommended)
+
+```bash
+conda create -n yanmeng python=3.8 -y
+conda activate yanmeng
+
+cd ymbackend
+pip install -r requirements.txt
+
+# Recommended for open-source deployment
+export DJANGO_SECRET_KEY='replace-with-your-own-secret-key'
+
+python manage.py migrate
+python manage.py runserver 127.0.0.1:8000
+```
+
+### 3) Frontend
+
+```bash
+cd ../ymfrontend
+npm install
+npm run dev
+```
+
+### 4) Entry points
+
+- Frontend: `http://localhost:5173`
+- Admin panel: `http://127.0.0.1:8000/admin/`
+- API docs: `http://127.0.0.1:8000/docs/`
+
+## Demo Accounts
+
+### Admin
+
+- Username: `admin`
+- Password: `YanmengAdmin@2026!`
+
+> Please change this password immediately after first login.
+
+### Frontend demo user
+
+- Phone: `18800000001`
+- Password: `demo123456`
+
+Optional accounts: `18800000002` ~ `18800000007` (same password).
+
+## Project Structure
+
+```text
+yanmengProject/
+├─ ymbackend/              # Django backend
+│  ├─ ymbackend/           # settings, urls
+│  ├─ userInfo/            # user app
+│  ├─ ymblog/              # article app
+│  ├─ ymforum/             # forum app
+│  └─ media/               # local static/media assets
+├─ ymfrontend/             # Vue3 + Vite frontend
+└─ docs/
+   ├─ images/showcase/     # README showcase images
+   └─ media/               # README video assets
+```
 
 ## Feature Showcase
 
@@ -135,77 +213,6 @@
   <img src="docs/images/showcase/signup.png" alt="Signup" width="31%" />
   <img src="docs/images/showcase/user-center.png" alt="User Center" width="31%" />
 </p>
-
-## Quick Start
-
-### 1) Clone repository
-
-```bash
-git clone <YOUR_REPO_URL>
-cd yanmengProject
-```
-
-### 2) Backend (conda recommended)
-
-```bash
-conda create -n yanmeng python=3.8 -y
-conda activate yanmeng
-
-cd ymbackend
-pip install -r requirements.txt
-
-# Recommended for open-source deployment
-export DJANGO_SECRET_KEY='replace-with-your-own-secret-key'
-
-python manage.py migrate
-python manage.py runserver 127.0.0.1:8000
-```
-
-### 3) Frontend
-
-```bash
-cd ../ymfrontend
-npm install
-npm run dev
-```
-
-### 4) Entry points
-
-- Frontend: `http://localhost:5173`
-- Admin panel: `http://127.0.0.1:8000/admin/`
-- API docs: `http://127.0.0.1:8000/docs/`
-
-## Demo Accounts
-
-### Admin
-
-- Username: `admin`
-- Password: `YanmengAdmin@2026!`
-
-> Please change this password immediately after first login.
-
-### Frontend demo user
-
-- Phone: `18800000001`
-- Password: `demo123456`
-
-Optional accounts: `18800000002` ~ `18800000007` (same password).
-
-## Project Structure
-
-```text
-yanmengProject/
-├─ ymbackend/              # Django backend
-│  ├─ ymbackend/           # settings, urls
-│  ├─ userInfo/            # user app
-│  ├─ ymblog/              # article app
-│  ├─ ymforum/             # forum app
-│  └─ media/               # local static/media assets
-├─ ymfrontend/             # Vue3 + Vite frontend
-└─ docs/
-   ├─ images/showcase/     # README showcase images
-   └─ media/               # README video assets
-```
 
 ## Open-Source Release Notes
 
