@@ -46,6 +46,10 @@
 - 管理侧可对用户、文章、帖子统一治理
 - 适合课程项目、毕设、校内运营平台二次开发
 
+<p align="center">
+  <img src="docs/images/ppt/image11.png" alt="End-to-end Workflow" width="88%" />
+</p>
+
 ### 2. 后台管理能力突出（`/admin`）
 
 - Django Admin + SimpleUI，界面统一、维护成本低
@@ -53,9 +57,7 @@
 - 细粒度内容管理，适配真实社区治理场景
 
 <p align="center">
-  <img src="docs/images/showcase/admin-login.png" alt="Admin Login" width="31%" />
-  <img src="docs/images/showcase/admin-users.png" alt="Admin Users" width="31%" />
-  <img src="docs/images/showcase/admin-articles.png" alt="Admin Articles" width="31%" />
+  <img src="docs/images/showcase/admin-users.png" alt="Admin Users" width="72%" />
 </p>
 
 ### 3. 接口文档可直接使用（`/docs`）
@@ -63,6 +65,10 @@
 - 文档入口：`http://127.0.0.1:8000/docs/`
 - 参数、路由、返回结构更清晰
 - 降低新成员上手成本，提升联调效率
+
+<p align="center">
+  <img src="docs/images/showcase/api-docs.png" alt="API Docs" width="88%" />
+</p>
 
 ## 功能展示
 

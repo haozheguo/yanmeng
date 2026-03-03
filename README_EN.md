@@ -46,6 +46,10 @@
 - Centralized moderation and governance for users, posts, and articles
 - Well-suited for coursework, capstone projects, and campus-level operations
 
+<p align="center">
+  <img src="docs/images/ppt/image11.png" alt="End-to-end Workflow" width="88%" />
+</p>
+
 ### 2. Strong admin capabilities (`/admin`)
 
 - Django Admin + SimpleUI for fast onboarding and low maintenance
@@ -53,9 +57,7 @@
 - Fine-grained moderation for real-world community governance
 
 <p align="center">
-  <img src="docs/images/showcase/admin-login.png" alt="Admin Login" width="31%" />
-  <img src="docs/images/showcase/admin-users.png" alt="Admin Users" width="31%" />
-  <img src="docs/images/showcase/admin-articles.png" alt="Admin Articles" width="31%" />
+  <img src="docs/images/showcase/admin-users.png" alt="Admin Users" width="72%" />
 </p>
 
 ### 3. Built-in API docs (`/docs`)
@@ -63,6 +65,10 @@
 - Docs entry: `http://127.0.0.1:8000/docs/`
 - Clear routes, parameters, and response structures
 - Lower onboarding cost and higher integration efficiency
+
+<p align="center">
+  <img src="docs/images/showcase/api-docs.png" alt="API Docs" width="88%" />
+</p>
 
 ## Feature Showcase
 
